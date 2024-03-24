@@ -1,28 +1,46 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-public class Main{
+
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        List<Contato> listaContatos = new ArrayList<>();
 
-        System.out.print("Informe o nome do contato: ");
-        String nome = scanner.nextLine();
+        while (true) {
+            System.out.print("Informe o nome do contato (ou digite 'sair' para encerrar): ");
+            String nome = scanner.nextLine();
 
-        System.out.print("Informe o telefone do contato: ");
-        String telefone = scanner.nextLine();
+            if (nome.equalsIgnoreCase("sair")) {
+                break; 
+            }
 
-        Contato novoContato = new Contato(nome, telefone);
+            System.out.print("Informe o telefone do contato: ");
+            String telefone = scanner.nextLine();
 
-        Agenda minhaAgenda = new Agenda();
-        minhaAgenda.adicionarContato(novoContato);
+            Contato novoContato = new Contato(nome, telefone);
+            listaContatos.add(novoContato);
+        }
 
         System.out.print("Digite o nome do contato para buscar: ");
         String nomeBusca = scanner.nextLine();
-        Contato busca = minhaAgenda.buscarContatoPorNome(nomeBusca);
+
+        Contato busca = buscarContatoPorNome(listaContatos, nomeBusca);
         if (busca != null) {
             System.out.println("Telefone de " + busca.getNome() + ": " + busca.getTelefone());
         } else {
             System.out.println("Contato não encontrado.");
         }
 
-        minhaAgenda.exibirTodosContatos();
+        scanner.close();
+    }
+
+    public static Contato buscarContatoPorNome(List<Contato> contatos, String nome) {
+        for (Contato contato : contatos) {
+            if (contato.getNome().equalsIgnoreCase(nome)) {
+                return contato;
+            }
+        }
+        return null;
     }
 }
