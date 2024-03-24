@@ -3,12 +3,22 @@ public class Carro {
     private String modelo;
     private int ano;
     private double velocidadeAtual;
+    private String placa;
 
     public Carro(String marca, String modelo, int ano) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
         this.velocidadeAtual = 0;
+        this.placa = placa;
+    }
+
+    public void setPlaca(String placa){
+        this.placa = placa;
+    }
+
+    public String getPlaca(){
+        return placa;
     }
 
     public void acelerar(double incremento) {
@@ -32,6 +42,7 @@ public class Carro {
     public void exibirInformacoes() {
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
+        System.out.println("Placa: " + placa);
         System.out.println("Ano: " + ano);
         System.out.println("Velocidade atual: " + velocidadeAtual + " km/h");
     }
