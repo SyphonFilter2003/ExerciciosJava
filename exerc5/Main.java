@@ -9,10 +9,14 @@ public class Main {
         System.out.print("Informe o modelo do carro: ");
         String modelo = scanner.nextLine();
 
+        System.out.print("Informe a placa do carro: ");
+        String placa = scanner.nextLine();
+
         System.out.print("Informe o ano do carro: ");
         int ano = scanner.nextInt();
 
         Carro meuCarro = new Carro(marca, modelo, ano);
+        meuCarro.setPlaca(placa);
 
         System.out.print("Digite o valor de aceleração (em km/h): ");
         double aceleracao = scanner.nextDouble();
@@ -23,5 +27,7 @@ public class Main {
         meuCarro.frear(frenagem);
 
         meuCarro.exibirInformacoes();
+
+        scanner.close();
     }
 }
