@@ -26,7 +26,7 @@ public class Livro {
     }
 
     public String exibirInfo(){
-        return "Livro: "+this.titulo+" Autor: "+this.autor+" Ano: "+this.ano;
+        return "Livro: "+this.titulo+" \nAutor: "+this.autor+" \nAno: "+this.ano;
     }
 
 }
