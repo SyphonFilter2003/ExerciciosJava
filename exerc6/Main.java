@@ -12,7 +12,7 @@ public class Main {
             String nome = scanner.nextLine();
 
             if (nome.equalsIgnoreCase("sair")) {
-                break; 
+                break;
             }
 
             System.out.print("Informe o telefone do contato: ");
