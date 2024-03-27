@@ -30,7 +30,7 @@ class Produto{
         return quantidadeemEstoque;
     }
 
-    public void setQuantidadeEmEstoque(int qutidade){
+    public void setQuantidadeEmEstoque(int quantidade){
         this.quantidadeemEstoque = quantidadeemEstoque;
     }
 }
