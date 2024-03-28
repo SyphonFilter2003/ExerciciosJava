@@ -37,7 +37,6 @@ public class Pedido {
         return total;
     }
 
-    // Getters e setters para os atributos
     public String getEnderecoEntrega() {
         return enderecoEntrega;
     }
