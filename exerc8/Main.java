@@ -54,7 +54,7 @@ public class Main {
 
     private static Pizza montarPizzaPersonalizada(Scanner scanner) {
         System.out.print("Informe o nome da pizza personalizada: ");
-        String nomePizza = scanner.next();
+        String nomePizza = scanner.nextLine();
 
         System.out.print("Informe o valor da pizza personalizada: ");
         double valorPizza = scanner.nextDouble();
