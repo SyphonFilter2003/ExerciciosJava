@@ -49,6 +49,4 @@ public class Pedido {
     public boolean isCancelado() {
         return cancelado;
     }
-
-    // ...
 }
