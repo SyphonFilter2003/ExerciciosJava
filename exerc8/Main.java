@@ -49,7 +49,7 @@ public class Main {
 
     private static String solicitarEndereco(Scanner scanner) {
         System.out.print("Informe o endereço de entrega: ");
-        return scanner.next();
+        return scanner.nextLine();
     }
 
     private static Pizza montarPizzaPersonalizada(Scanner scanner) {
